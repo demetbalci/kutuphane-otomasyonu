@@ -1,0 +1,61 @@
+<?php
+include("connect.php");
+
+$query=$baglan->prepare("select *from uyeler");
+$result=$query->execute();
+
+
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  background-color: rgb(115, 16, 207);
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 200%;
+ 
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 5px;
+ 
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<h2>ÜYE LİSTELEME SAYFASI</h2>
+<table>
+  <tr>
+    <th>ÜYE NO</th>
+    <th>ÜYE ADI</th>
+    <th>ÜYE SOYADI</th>
+    <th>FAKÜLTE</th>
+    <th>BÖLÜM</th>
+    <th>E-MAİL</th>
+    <th>TELEFON</th>
+  </tr>
+<tr>
+  <td>alfreds futterkiste</td>
+  <td>maria anders</td>
+  <td>germany</td>
+</tr> 
+<tr>
+  <td>centro commercial moctezuma</td>
+  <td>francisco chang</td>
+  <td>mexico</td>
+</tr>
+
+</table>
+
+</body>
+</html>
